@@ -10,3 +10,21 @@ mojo_test(
         "@mojo//:stdlib",
     ],
 )
+
+mojo_test(
+    name = "official_moe_benchmark",
+    srcs = ["official_moe_benchmark.mojo"],
+    deps = [
+        "//modular_hack/src:moe_kernel",
+        "@mojo//:stdlib",
+    ],
+)
+
+mojo_test(
+    name = "comprehensive_performance",
+    srcs = ["comprehensive_performance.mojo"],
+    deps = [
+        "//modular_hack/src:moe_kernel",
+        "@mojo//:stdlib",
+    ],
+)

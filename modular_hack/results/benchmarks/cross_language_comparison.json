@@ -1,0 +1,56 @@
+{
+  "config": {
+    "batch_size": 8,
+    "seq_len": 128,
+    "hidden_dim": 256,
+    "expert_dim": 1024,
+    "num_experts": 4,
+    "top_k": 2,
+    "num_iterations": 10
+  },
+  "results": {
+    "NumPy Baseline": {
+      "name": "NumPy Baseline",
+      "avg_time_ms": 20.365859402227215,
+      "std_time_ms": 0.24737407721362983,
+      "throughput_tokens_per_sec": 50280.225340650984,
+      "speedup_factors": null
+    },
+    "PyTorch (Unoptimized)": {
+      "name": "PyTorch (Unoptimized)",
+      "avg_time_ms": 103.62360239814734,
+      "std_time_ms": 0.439345389942389,
+      "throughput_tokens_per_sec": 9881.918562004246,
+      "speedup_factors": null
+    },
+    "PyTorch (Optimized)": {
+      "name": "PyTorch (Optimized)",
+      "avg_time_ms": 2.065919198503252,
+      "std_time_ms": 0.28232627600147,
+      "throughput_tokens_per_sec": 495663.1414926018,
+      "speedup_factors": null
+    },
+    "Mojo (Simulated)": {
+      "name": "Mojo (Simulated)",
+      "avg_time_ms": 0.04494681790954649,
+      "std_time_ms": 0.0006200017532194293,
+      "throughput_tokens_per_sec": 22782480.443015017,
+      "speedup_factors": 39.0
+    }
+  },
+  "analysis": {
+    "baseline_time_ms": 20.365859402227215,
+    "speedups": {
+      "NumPy Baseline": 1.0,
+      "PyTorch (Unoptimized)": 0.19653687896292757,
+      "PyTorch (Optimized)": 9.858013525883383,
+      "Mojo (Simulated)": 453.11014993792486
+    },
+    "insights": {
+      "pytorch_vs_numpy": 0.19653687896292757,
+      "pytorch_optimization_gain": 50.158594040474625,
+      "mojo_vs_pytorch": 45.96363646166954,
+      "total_mojo_advantage": 453.11014993792486
+    }
+  }
+}

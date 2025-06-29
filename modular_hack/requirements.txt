@@ -1,0 +1,19 @@
+# MOE Kernel Performance Demo Requirements
+# Install with: pip install -r requirements.txt
+
+# Core dependencies for performance demos
+torch>=1.9.0
+numpy>=1.20.0
+matplotlib>=3.5.0
+
+# Enhanced visualization (optional but recommended)
+seaborn>=0.11.0
+
+# Progress bars for benchmarks
+tqdm>=4.60.0
+
+# For MAX integration (optional - see DEPLOYMENT_GUIDE.md)
+# modular>=0.1.0  # Requires special index: pip install modular --index-url https://dl.modular.com/public/nightly/python/simple/
+
+# Development/testing (optional)
+pytest>=6.0.0
