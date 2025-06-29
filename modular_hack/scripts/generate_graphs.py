@@ -12,7 +12,7 @@ import seaborn as sns
 from pathlib import Path
 
 # Set style for professional presentation
-plt.style.use('seaborn-v0_8')
+plt.style.use('default')
 sns.set_palette("husl")
 
 def generate_efficiency_comparison():

@@ -1,0 +1,6 @@
+load("@mojo//stdlib:mojo.bzl", "mojo_binary")
+
+mojo_binary(
+    name = "test_simd",
+    srcs = ["test_simd.mojo"],
+)
